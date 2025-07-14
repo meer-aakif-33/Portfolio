@@ -104,7 +104,7 @@ export default function Home() {
     <Typewriter
       words={[
         "Full Stack Developer",
-        "Machine Learning Enthusiast",
+        "Machine Learning Developer",
         "MERN Stack Developer",
       ]}
       loop
