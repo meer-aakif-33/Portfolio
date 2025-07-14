@@ -4,29 +4,29 @@ import { motion } from "framer-motion";
 export function SocialLinks() {
   const socialItems = [
     {
-      href: "https://github.com/your-username",
+      href: "https://github.com/meer-aakif-33 ",
       icon: <FaGithub />,
       label: "GitHub",
       color: "#181717",
     },
     {
-      href: "https://linkedin.com/in/your-id",
+      href: "https://linkedin.com/in/aakif-ahmad-mir-2b5b80288/",
       icon: <FaLinkedin />,
       label: "LinkedIn",
       color: "#0077B5",
     },
     {
-      href: "mailto:you@example.com",
+      href: "mailto: aakifofficial@gmail.com",
       icon: <FaEnvelope />,
       label: "Email",
       color: "#EA4335",
     },
-    {
-      href: "https://twitter.com/your-handle",
-      icon: <FaTwitter />,
-      label: "Twitter",
-      color: "#1DA1F2",
-    },
+    // {
+    //   href: "https://twitter.com/your-handle",
+    //   icon: <FaTwitter />,
+    //   label: "Twitter",
+    //   color: "#1DA1F2",
+    // },
   ];
 
   return (

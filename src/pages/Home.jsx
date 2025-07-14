@@ -11,6 +11,7 @@ import {
   FaGitAlt,
   FaJava,
   FaDatabase,
+  FaLayerGroup
 } from "react-icons/fa";
 import {
   SiFastapi,
@@ -48,6 +49,7 @@ const skillGroups = [
     skills: [
       { name: "MERN", icon: <FaReact />, color: "text-cyan-500" },
       { name: "Machine Learning", icon: <SiScikitlearn />, color: "text-orange-400" },
+      { name: "Full Stack", icon: <FaLayerGroup />, color: "text-purple-500" }
     ],
   },
   {
@@ -116,7 +118,7 @@ export default function Home() {
     />
   </p>
   <motion.a
-    href="/resume.pdf"
+    href="/Aakif's Resume.pdf"
     download
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}

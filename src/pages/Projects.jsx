@@ -126,42 +126,61 @@ export default function ProjectsPage() {
         <h2 className="text-4xl font-extrabold mb-16 text-center text-gray-900 dark:text-white">
           My Journey
         </h2>
-        <VerticalTimeline lineColor={theme === "dark" ? "#3b82f6" : "#60a5fa"}   >
-<VerticalTimelineElement
-  contentStyle={{ background: "#3b82f6", color: "#fff" }}
-  contentArrowStyle={{ borderRight: "7px solid #3b82f6" }}
-  iconStyle={{ background: "#3b82f6", color: "#fff" }}
-  icon={<FaGraduationCap />}
-  date="2021 - Present"
->
-  <h3 className="vertical-timeline-element-title text-white font-semibold text-xl">
-    B.Tech CSE
-  </h3>
-  <h4 className="vertical-timeline-element-subtitle text-white/90">
-    CBIT Hyderabad
-  </h4>
-  <p className="text-white/80">
-    Specializing in AI, ML, and Full Stack Development.
-  </p>
-</VerticalTimelineElement>
+      <VerticalTimeline lineColor={theme === "dark" ? "#3b82f6" : "#60a5fa"}   >
+      <VerticalTimelineElement
+        contentStyle={{ background: "#3b82f6", color: "#fff" }}
+        contentArrowStyle={{ borderRight: "7px solid #3b82f6" }}
+        iconStyle={{ background: "#3b82f6", color: "#fff" }}
+        icon={<FaGraduationCap />}
+        date="Nov 2022 - Present"
+      >
+        <h3 className="vertical-timeline-element-title text-white font-semibold text-xl">
+          B.Tech CSE
+        </h3>
+        <h4 className="vertical-timeline-element-subtitle text-white/90">
+          CBIT Hyderabad
+        </h4>
+        <p className="text-white/80">
+          Specializing in AI, ML, and Full Stack Development, MERN Stack Development.
+        </p>
+      </VerticalTimelineElement>
 
-<VerticalTimelineElement
-  contentStyle={{ background: "#14b8a6", color: "#fff" }}
-  contentArrowStyle={{ borderRight: "7px solid #14b8a6" }}
-  iconStyle={{ background: "#14b8a6", color: "#fff" }}
-  icon={<FaBriefcase />}
-  date="May 2024 - Jul 2024"
->
-  <h3 className="vertical-timeline-element-title text-white font-semibold text-xl">
-    Intern
-  </h3>
-  <h4 className="vertical-timeline-element-subtitle text-white/90">
-    Nullclass
-  </h4>
-  <p className="text-white/80">
-    Built an AI-powered Q&A chatbot using LangChain and Gemini API.
-  </p>
-</VerticalTimelineElement>
+      <VerticalTimelineElement
+        contentStyle={{ background: "#14b8a6", color: "#fff" }}
+        contentArrowStyle={{ borderRight: "7px solid #14b8a6" }}
+        iconStyle={{ background: "#14b8a6", color: "#fff" }}
+        icon={<FaBriefcase />}
+        date="Feb 2025 - Apr 2024"
+      >
+        <h3 className="vertical-timeline-element-title text-white font-semibold text-xl">
+          Intern
+        </h3>
+        <h4 className="vertical-timeline-element-subtitle text-white/90">
+          Nullclass
+        </h4>
+        <p className="text-white/80">
+          Built an AI-powered Q&A chatbot using LangChain and Gemini API.
+        </p>
+      </VerticalTimelineElement>
+      
+      <VerticalTimelineElement
+        contentStyle={{ background: "#4b6c8a", color: "#fff" }}
+        contentArrowStyle={{ borderRight: "7px solid #4b6c8a" }}
+        iconStyle={{ background: "#4b6c8a", color: "#fff" }}
+        icon={<FaBriefcase />}
+        date="Apr 2025 - Present"
+      >
+        <h3 className="vertical-timeline-element-title text-white font-semibold text-xl">
+          Intern
+        </h3>
+        <h4 className="vertical-timeline-element-subtitle text-white/90">
+          Tenth Plus
+        </h4>
+        <p className="text-white/80">
+          Building Spaced Revision App.
+        </p>
+      </VerticalTimelineElement>
+
         </VerticalTimeline>
       </section>
 

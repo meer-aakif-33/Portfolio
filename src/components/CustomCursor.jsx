@@ -11,7 +11,7 @@ export default function CustomCursor() {
     let targetX = 0,
       targetY = 0;
 
-    const speed = 1; // Increase this to make cursor move faster (0.2 to 1)
+    const speed = 1;
 
     const animate = () => {
       x += (targetX - x) * speed;
@@ -25,14 +25,40 @@ export default function CustomCursor() {
     };
     animate();
 
-    const move = (e) => {
+    const handleMouseMove = (e) => {
       targetX = e.clientX;
       targetY = e.clientY;
+      if (cursor) cursor.style.opacity = hovered ? "0.6" : "0.4";
     };
 
-    window.addEventListener("mousemove", move);
-    return () => window.removeEventListener("mousemove", move);
-  }, []);
+    const handleTouchMove = (e) => {
+      if (e.touches.length > 0) {
+        targetX = e.touches[0].clientX;
+        targetY = e.touches[0].clientY;
+        if (cursor) cursor.style.opacity = hovered ? "0.6" : "0.4";
+      }
+    };
+
+    const handleTouchStart = (e) => {
+      handleTouchMove(e);
+    };
+
+    const handleTouchEnd = () => {
+      if (cursor) cursor.style.opacity = "0";
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("touchend", handleTouchEnd);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [hovered]);
 
   useEffect(() => {
     const hoverables = document.querySelectorAll("a, button, .cursor-hover");

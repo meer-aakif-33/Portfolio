@@ -13,8 +13,8 @@ export default function About() {
           About Me
         </h2>
         <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed tracking-wide">
-          I'm a passionate <span className="font-medium text-blue-600 dark:text-blue-400">Full Stack Developer</span> ,
-          <span className="font-medium text-orange-500 dark:text-orange-200"> MERN Stack Developer</span>
+          I'm a passionate <span className="font-medium text-blue-600 dark:text-blue-400">Full Stack Developer</span>,
+          <span className="font-medium text-orange-500 dark:text-orange-200"> MERN Stack Developer </span>
           and
           <span className="font-medium text-purple-600 dark:text-purple-400"> Machine Learning enthusiast</span>. I love
           building sleek user interfaces and intelligent systems that solve real-world problems. My journey blends creativity,
