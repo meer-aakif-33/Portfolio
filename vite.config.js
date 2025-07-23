@@ -9,7 +9,7 @@ export default defineConfig({
     hmr: {
       protocol: 'ws',         // Force WebSocket protocol
       host: 'localhost',      // Match the host
-      port: 5173,             // Match your dev port
+      port: 5174,             // Match your dev port
       overlay: false          // Disable red error overlay
     }
   }
