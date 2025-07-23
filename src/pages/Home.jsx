@@ -3,6 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { SocialLinks } from "../components/SocialLinks";
 import ParticlesBackground from "../components/ParticlesBackground";
 import { FaChartBar } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 import {
   FaReact,
@@ -154,24 +155,30 @@ export default function Home() {
             </motion.a>
 
             {/* View Projects */}
-            <motion.a
-              href="/projects"
+            <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-53 text-center inline-block relative text-blue-600 dark:text-cyan-400 font-semibold px-7 sm:px-6 py-2 sm:py-3 rounded-xl bg-white dark:bg-zinc-900 transition-all duration-300 border-2 border-blue-500 hover:shadow-[0_0_12px_rgba(59,130,246,0.5)] hover:scale-105 transform"
             >
-              🚀 View Projects
-            </motion.a>
+              <Link
+                to="/projects"
+                className="min-w-max whitespace-nowrap text-center inline-block relative text-blue-600 dark:text-cyan-400 font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-xl bg-white dark:bg-zinc-900 transition-all duration-300 border-2 border-blue-500 hover:shadow-[0_0_12px_rgba(59,130,246,0.5)] hover:scale-105 transform"
+              >
+                🚀 View Projects
+              </Link>
+            </motion.div>
 
             {/* Let's Connect */}
-            <motion.a
-              href="/contact"
+            <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-53 text-center inline-block relative font-semibold px-7 sm:px-6 py-2 sm:py-3 rounded-xl text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg"
             >
-              🤝 Let's Connect
-            </motion.a>
+              <Link
+                to="/contact"
+                className="min-w-max whitespace-nowrap text-center inline-block relative font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-xl text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg"
+              >
+                🤝 Let's Connect
+              </Link>
+            </motion.div>
           </div>
         </motion.div>
       </section>
