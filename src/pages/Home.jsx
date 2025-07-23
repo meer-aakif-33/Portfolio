@@ -156,6 +156,8 @@ export default function Home() {
             {/* View Projects */}
             <motion.a
               href="projects"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="w-53 text-center inline-block relative text-blue-600 dark:text-cyan-400 font-semibold px-7 sm:px-6 py-2 sm:py-3 rounded-xl bg-white dark:bg-zinc-900 transition-all duration-300 border-2 border-blue-500 hover:shadow-[0_0_12px_rgba(59,130,246,0.5)] hover:scale-105 transform"
@@ -166,6 +168,8 @@ export default function Home() {
             {/* Let's Connect */}
             <motion.a
               href="/contact"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="w-53 text-center inline-block relative font-semibold px-7 sm:px-6 py-2 sm:py-3 rounded-xl text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg"
