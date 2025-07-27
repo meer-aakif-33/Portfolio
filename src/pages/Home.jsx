@@ -193,7 +193,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-4xl font-bold mb-12 text-gray-800 dark:text-white">
+          <h2 className="text-3xl font-bold mb-12 text-gray-800 dark:text-white">
             My Skills
           </h2>
 

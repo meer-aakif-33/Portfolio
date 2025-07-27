@@ -27,6 +27,7 @@ const projects = [
     image: "/projects/movie-recommender.png",
     tags: ["Python", "Streamlit", "TMDb API"],
     link: "https://github.com/meer-aakif-33/Movie-Recommender-System",
+    live_link: "https://aakif-movie-recommender-system.streamlit.app/",
   },
   {
     title: "Olympics Data Analysis and Visualization",
@@ -34,6 +35,7 @@ const projects = [
     image: "/projects/olympics.png",
     tags: ["Python", "Streamlit", "Pandas", "Seaborn", "Plotly"],
     link: "https://github.com/meer-aakif-33/Olympic-Data-Analysis-of-120-Years",
+    live_link: "https://meer-aakif-33-olympic-data-analysis-of-120-years-app-z1l6wd.streamlit.app/",
   },
   {
     title: "Customizable News Aggregator with Summarizer",
