@@ -25,7 +25,7 @@ export default function Blogs() {
       <div className="max-w-6xl mx-auto">
         {/* Animated Heading */}
         <motion.h2
-          className="text-4xl font-bold mb-14 text-center text-gray-900 dark:text-white"
+          className="text-3xl font-bold mb-14 text-center text-gray-900 dark:text-white"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}

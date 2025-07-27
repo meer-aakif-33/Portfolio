@@ -60,7 +60,7 @@ export default function ProjectsPage() {
           transition={{ duration: 0.7 }}
           className="max-w-6xl mx-auto"
         >
-          <h2 className="text-4xl font-extrabold mb-14 text-center text-gray-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl font-extrabold mb-14 text-center text-gray-900 dark:text-white tracking-tight">
             My Projects
           </h2>
           <div className="grid gap-12 md:grid-cols-2">
