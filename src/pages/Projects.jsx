@@ -161,7 +161,7 @@ export default function ProjectsPage() {
           Nullclass
         </h4>
         <p className="text-white/80">
-          Built an AI-powered Q&A chatbot using LangChain and Gemini API.
+          Woked an AI-powered Q&A chatbot using LangChain and Gemini API.
         </p>
       </VerticalTimelineElement>
       
