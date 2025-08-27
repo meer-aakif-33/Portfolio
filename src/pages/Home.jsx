@@ -20,6 +20,7 @@ import {
   SiMongodb,
   SiPostman,
   SiJavascript,
+  SiJava,
   SiC,
   SiKotlin,
   SiMysql,
@@ -52,23 +53,24 @@ const skillGroups = [
   {
     title: "Languages",
     skills: [
-      { name: "C", icon: <SiC />, color: "text-blue-600" },
       { name: "Python", icon: <FaPython />, color: "text-yellow-500" },
+      { name: "Java", icon: <SiJava />, color: "text-red-500" },
+      { name: "C", icon: <SiC />, color: "text-blue-600" },
       { name: "JavaScript", icon: <SiJavascript />, color: "text-yellow-400" },
-      { name: "Kotlin", icon: <SiKotlin />, color: "text-purple-500" },
       { name: "SQL", icon: <FaDatabase />, color: "text-blue-400" },
+      { name: "Kotlin", icon: <SiKotlin />, color: "text-purple-500" },
     ],
   },
   {
     title: "Tech Stack",
     skills: [
+      { name: "Full Stack", icon: <FaLayerGroup />, color: "text-purple-500" },
       { name: "MERN", icon: <FaReact />, color: "text-cyan-500" },
       {
         name: "Machine Learning",
         icon: <SiScikitlearn />,
         color: "text-orange-400",
       },
-      { name: "Full Stack", icon: <FaLayerGroup />, color: "text-purple-500" },
     ],
   },
   {
