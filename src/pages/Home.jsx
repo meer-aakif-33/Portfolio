@@ -6,8 +6,6 @@ import { FaChartBar } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 import { FaJava } from "react-icons/fa";
-import { FaJava } from "react-icons/fa";
-
 
 import {
   FaReact,
