@@ -230,3 +230,4 @@ Web performance is more important than ever. A slow website increases bounce rat
 A high-performing website leads to better rankings, happier users, and higher retention. In 2025, speed is not just about user experience — it’s a business advantage. By combining modern optimization techniques, careful resource management, and continuous monitoring, you can ensure your site stays fast, reliable, and competitive.
   `,
 },
+]
