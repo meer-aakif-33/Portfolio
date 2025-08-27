@@ -99,7 +99,7 @@ Understanding these patterns is critical for handling APIs, timers, animations, 
     title: "Mastering GitHub Workflow",
     summary:
       "Learn how to structure your Git branches, manage pull requests, and squash bugs with confidence.",
-    image: "https://cdn.shamaliroshan.com/github-actions.png",
+    image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ffty6al7g8gecb9plasua.jpg",
     content: `
 A well-defined GitHub workflow streamlines team collaboration, makes code history readable, and ensures fewer bugs.
 
