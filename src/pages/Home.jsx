@@ -6,6 +6,8 @@ import { FaChartBar } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 import { FaJava } from "react-icons/fa";
+import { FaJava } from "react-icons/fa";
+
 
 import {
   FaReact,
@@ -55,7 +57,7 @@ const skillGroups = [
     title: "Languages",
     skills: [
       { name: "Python", icon: <FaPython />, color: "text-yellow-500" },
-      { name: "Java", icon: <SiJava />, color: "text-red-500" },
+      { name: "Java", icon: <FaJava />, color: "text-red-500" },
       { name: "C", icon: <SiC />, color: "text-blue-600" },
       { name: "JavaScript", icon: <SiJavascript />, color: "text-yellow-400" },
       { name: "SQL", icon: <FaDatabase />, color: "text-blue-400" },
