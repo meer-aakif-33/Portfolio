@@ -5,12 +5,13 @@ import ParticlesBackground from "../components/ParticlesBackground";
 import { FaChartBar } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
+import { FaJava } from "react-icons/fa";
+
 import {
   FaReact,
   FaNodeJs,
   FaPython,
   FaGitAlt,
-  FaJava,
   FaDatabase,
   FaLayerGroup,
 } from "react-icons/fa";
