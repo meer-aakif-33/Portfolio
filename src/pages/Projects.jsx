@@ -4,6 +4,22 @@ import { useTheme } from "next-themes";
 import "react-vertical-timeline-component/style.min.css";
 import { useState } from "react";
 const projects = [
+  // {
+  //   title: "Trustribe - Community Engagement Platform",
+  //   desc: "Collaborated on a Community Engagement platform with real-time chat via Socket.io, incident reporting, and event management using MongoDB. Implemented user authentication, session management with express-session, and email notifications for incidents and complaints. Designed a dynamic event calendar with seamless updates and secure user interactions, including group chat and access control.",
+  //   image: "/projects/trustribe.png",
+  //   tags: ["Node.js", "Express", "MongoDB", "Socket.io"],
+  //   link: "https://github.com/mrranger939/Community-Engagement",
+  //   live_link: "https://community-engagement.onrender.com",
+  // },
+  {
+    title: "News Aggregator with Personalized Recommendations and Summaries",
+    desc: "Built a full-stack news aggregator using React, Node.js/Express, PostgreSQL, and Python NLP to deliver personalized, summarized, and recommended content. Implemented JWT-based authentication with secure signup/login flows, automatic preference persistence, and seamless retrieval of user preferences on login. Integrated real-time web scraping, intelligent summarization (Transformers), and a recommendation system (Scikit-learn) to enhance personalization. Designed a responsive, preference-driven UI, improving engagement and reducing average read time by 60% through AI-generated summaries.",
+    image: "/projects/news-aggregator.png",
+    tags: ["React", "Node.js", "PostgreSQL", "NLP", "Transformers", "Sklearn"],
+    link: "https://github.com/meer-aakif-33/News-Aggregator-with-Personlised-Recommendations-and-Summaries",
+    live_link: "https://news-aggregator-with-personlised-re-mu.vercel.app/",
+  },
   {
     title: "Distributed Event-Driven Video Processing Pipeline",
     desc: "Built a distributed video processing pipeline using FastAPI and React (Vite), supporting real-time video upload, enhancement, and metadata extraction. Integrated RabbitMQ for task queuing and WebSockets for instant status updates, reducing processing response time by 40%. Implemented an intuitive UI with smooth upload and download experience, achieving user satisfaction in testing.",
@@ -19,12 +35,11 @@ const projects = [
     link: "https://github.com/meer-aakif-33/YouTube-Video-summarizer-and-caption-extractor",
   },
   {
-    title: "Movie Recommender System",
-    desc: "Developed a content-based movie recommender system using Python, Streamlit, and TMDb API. Implemented similarity-based recommendations using precomputed similarity matrices. Deployed the application on Streamlit for seamless accessibility and real-time recommendations.",
-    image: "/projects/movie-recommender.png",
-    tags: ["Python", "Streamlit", "TMDb API"],
-    link: "https://github.com/meer-aakif-33/Movie-Recommender-System",
-    live_link: "https://aakif-movie-recommender-system.streamlit.app/",
+    title: "Chef Recipe Generator",
+    desc: "Built a React-based AI-powered Recipe Generator that suggests recipes based on user-provided ingredients. Implemented real-time ingredient management, duplicate prevention, and smooth UI animations. Deployed the application with dynamic recipe fetching and automatic scrolling for an enhanced user experience.",
+    image: "/projects/chef-claude.png",
+    tags: ["React", "AI", "Frontend"],
+    link: "https://github.com/meer-aakif-33/Chef-Claude-Recipe-Generator",
   },
   {
     title: "Olympics Data Analysis and Visualization",
@@ -35,11 +50,20 @@ const projects = [
     live_link: "https://meer-aakif-33-olympic-data-analysis-of-120-years-app-z1l6wd.streamlit.app/",
   },
   {
-    title: "Customizable News Aggregator with Summarizer",
-    desc: "Built a full-stack news aggregator using React (Vite), Node.js/Express, and Python NLP to deliver personalized, summarized, and recommended content. Integrated JWT-based authentication, real-time web scraping, and intelligent summarization and recommendation using Transformers and Sklearn. Designed a clean, responsive UI with preference-based feeds, increasing user engagement and reducing average read time by 60% through AI-generated summaries.",
-    image: "/projects/news-aggregator.png",
-    tags: ["React", "Node.js", "NLP", "Sklearn", "Transformers"],
-    link: "https://github.com/Arcane-WD/Customizable-News-Aggregator",
+    title: "Movie Recommender System",
+    desc: "Developed a content-based movie recommender system using Python, Streamlit, and TMDb API. Implemented similarity-based recommendations using precomputed similarity matrices. Deployed the application on Streamlit for seamless accessibility and real-time recommendations.",
+    image: "/projects/movie-recommender.png",
+    tags: ["Python", "Streamlit", "TMDb API"],
+    link: "https://github.com/meer-aakif-33/Movie-Recommender-System",
+    live_link: "https://aakif-movie-recommender-system.streamlit.app/",
+  },
+  {
+    title: "Amazon.com Clone with Vanilla JS",
+    desc: "Designed and developed a user-friendly Amazon.com clone using Vanilla JavaScript. Features include fetching data from the backend, adding/removing items from the cart.",
+    image: "/projects/amazon-dot-com.png",
+    tags: ["JavaScript", "Frontend",],
+    link: "https://github.com/meer-aakif-33/Amazon.com-with-vanilla-JS",
+    live_link: "http://meer-aakif-33.github.io/Amazon.com-with-vanilla-JS/",
   },
 ];
 
@@ -61,61 +85,76 @@ export default function ProjectsPage() {
             My Projects
           </h2>
           <div className="grid gap-12 md:grid-cols-2">
-        {projects.map((p, i) => {
-          const [expanded, setExpanded] = useState(null);
-          const isOpen = expanded === i;
+{projects.map((p, i) => {
+  const [expanded, setExpanded] = useState(null);
+  const isOpen = expanded === i;
 
-          return (
-            <motion.div
-              key={i}
-              whileHover={{ scale: 1.03, rotate: 0.3 }}
-              transition={{ duration: 0.3 }}
-              className="bg-white dark:bg-zinc-900 text-gray-800 dark:text-white border border-gray-200 dark:border-zinc-700 rounded-2xl shadow-md hover:shadow-xl overflow-hidden transform transition-transform"
+  return (
+    <motion.div
+      key={i}
+      whileHover={{ scale: 1.03, rotate: 0.3 }}
+      transition={{ duration: 0.3 }}
+      className="bg-white dark:bg-zinc-900 text-gray-800 dark:text-white border border-gray-200 dark:border-zinc-700 rounded-2xl shadow-md hover:shadow-xl overflow-hidden transform transition-transform"
+    >
+      <img
+        src={p.image}
+        alt={p.title}
+        className="w-full h-52 object-cover object-top transition duration-300 hover:scale-105"
+      />
+      <div className="p-6">
+        <h3 className="text-2xl font-bold mb-2">{p.title}</h3>
+
+        <p
+          className={`text-gray-600 dark:text-gray-300 mb-2 leading-relaxed transition-all duration-300 ease-in-out ${
+            isOpen ? "" : "line-clamp-3"
+          }`}
+        >
+          {p.desc}
+        </p>
+
+        <button
+          onClick={() => setExpanded(isOpen ? null : i)}
+          className="text-blue-600 dark:text-blue-400 font-medium hover:underline focus:outline-none mb-4"
+        >
+          {isOpen ? "Show less" : "Read more"}
+        </button>
+
+        <div className="flex flex-wrap gap-2 mb-4">
+          {p.tags.map((tag, idx) => (
+            <span
+              key={idx}
+              className="px-2 py-1 text-sm bg-indigo-100 dark:bg-indigo-800 text-indigo-700 dark:text-white rounded-full shadow-sm hover:scale-105 transition-transform"
             >
-              <img
-                src={p.image}
-                alt={p.title}
-                className="w-full h-52 object-cover object-top transition duration-300 hover:scale-105"
-              />
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2">{p.title}</h3>
+              #{tag}
+            </span>
+          ))}
+        </div>
 
-                <p className={`text-gray-600 dark:text-gray-300 mb-2 leading-relaxed transition-all duration-300 ease-in-out ${
-                  isOpen ? '' : 'line-clamp-3'
-                }`}>
-                  {p.desc}
-                </p>
+        <div className="flex gap-4">
+          {p.live_link && (
+            <a
+              href={p.live_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-600 dark:text-green-400 font-semibold inline-flex items-center gap-1 hover:underline"
+            >
+              Live Demo →
+            </a>
+          )}
+          <a
+            href={p.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 dark:text-indigo-400 font-semibold inline-flex items-center gap-1 hover:underline"
+          >
+            View Project →
+          </a>
+        </div>
+      </div>
+    </motion.div>
+  );
+})}
 
-                <button
-                  onClick={() => setExpanded(isOpen ? null : i)}
-                  className="text-blue-600 dark:text-blue-400 font-medium hover:underline focus:outline-none mb-4"
-                >
-                  {isOpen ? "Show less" : "Read more"}
-                </button>
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {p.tags.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="px-2 py-1 text-sm bg-indigo-100 dark:bg-indigo-800 text-indigo-700 dark:text-white rounded-full shadow-sm hover:scale-105 transition-transform"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-
-                <a
-                  href={p.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-indigo-600 dark:text-indigo-400 font-semibold inline-flex items-center gap-1 hover:underline"
-                >
-                  View Project →
-                </a>
-              </div>
-            </motion.div>
-          );
-        })}
           </div>
         </motion.div>
       </section>

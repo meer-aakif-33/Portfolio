@@ -124,9 +124,23 @@ export default function Home() {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="relative z-10 text-center px-4"
         >
+          {/* 👇 Profile Photo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="flex justify-center mb-6"
+          >
+            <img
+              src="/web-app-manifest-512x512.png" // 👉 replace with your actual photo path (e.g., /assets/aakif.jpg)
+              alt="Aakif"
+              className="w-60 h-60 rounded-full border-4 border-blue-500 shadow-lg object-cover"
+            />
+          </motion.div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-cyan-400 dark:to-violet-500 mb-4">
             Hi, I'm Aakif
           </h1>
+
           <p className="text-l md:text-xl text-gray-700 dark:text-gray-300 mb-6 font-medium">
             <Typewriter
               words={[
@@ -143,7 +157,7 @@ export default function Home() {
             />
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 mt-6 w-full px-4">
-            {/* Download Resume */}
+            {/* Download Resume
             <motion.a
               href="/Aakif's Resume.pdf"
               target="_blank"
@@ -154,7 +168,7 @@ export default function Home() {
               className="w-53 text-center inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold px-2 sm:px-6 py-2 sm:py-3 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
             >
               📄 Download Resume
-            </motion.a>
+            </motion.a> */}
 
             {/* View Projects */}
             <motion.div
