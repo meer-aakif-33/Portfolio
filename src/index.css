@@ -14,3 +14,7 @@ body {
 body {
   @apply transition-colors duration-500 ease-in-out bg-white text-gray-800 dark:bg-black dark:text-white;
 }
+
+html {
+  scroll-behavior: smooth;
+}

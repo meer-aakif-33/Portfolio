@@ -157,18 +157,16 @@ export default function Home() {
             />
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 mt-6 w-full px-4">
-            {/* Download Resume
+            
             <motion.a
-              href="/Aakif's Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              download
+              href='#skills'
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-53 text-center inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold px-2 sm:px-6 py-2 sm:py-3 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="w-53 text-center inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold px- sm:px-16 py-2 sm:py-3 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              📄 Download Resume
-            </motion.a> */}
+              Skills
+                          
+            </motion.a>
 
             {/* View Projects */}
             <motion.div
@@ -202,7 +200,7 @@ export default function Home() {
       {/* About Section */}
       <About />
       {/* Skills Section */}
-      <section className="px-6 py-20 bg-gray-50 dark:bg-zinc-950">
+      <section className="px-6 py-20 bg-gray-50 dark:bg-zinc-950" id="skills">
         <motion.div
           className="max-w-6xl mx-auto text-center"
           initial={{ opacity: 0, y: 40 }}
