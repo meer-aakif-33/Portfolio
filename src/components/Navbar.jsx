@@ -21,7 +21,7 @@ export default function Navbar() {
     { to: "/about", label: "About" },
     { to: "/projects", label: "Projects" },
     { to: "/contact", label: "Contact" },
-    { to: "/blogs", label: "Blogs"},
+    // { to: "/blogs", label: "Blogs"},
   ];
 
   const isActive = (path) => location.pathname === path;

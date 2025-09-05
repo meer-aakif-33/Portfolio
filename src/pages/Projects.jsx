@@ -1,7 +1,4 @@
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaPython, FaGitAlt, FaGraduationCap, FaBriefcase } from "react-icons/fa";
-import { SiFastapi, SiTailwindcss, SiMongodb, SiPostman } from "react-icons/si";
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import { SocialLinks } from "../components/SocialLinks";
 import { useTheme } from "next-themes";
 import "react-vertical-timeline-component/style.min.css";
@@ -122,98 +119,7 @@ export default function ProjectsPage() {
           </div>
         </motion.div>
       </section>
-      
-      {/* Timeline Section */}
-      <section className="px-6 py-24 bg-gray-100 dark:bg-zinc-900">
-        <h2 className="text-4xl font-extrabold mb-16 text-center text-gray-900 dark:text-white">
-          My Journey
-        </h2>
-      <VerticalTimeline lineColor={theme === "dark" ? "#3b82f6" : "#60a5fa"}   >
-      <VerticalTimelineElement
-        contentStyle={{ background: "#3b82f6", color: "#fff" }}
-        contentArrowStyle={{ borderRight: "7px solid #3b82f6" }}
-        iconStyle={{ background: "#3b82f6", color: "#fff" }}
-        icon={<FaGraduationCap />}
-        date="Nov 2022 - Present"
-      >
-        <h3 className="vertical-timeline-element-title text-white font-semibold text-xl">
-          B.Tech CSE
-        </h3>
-        <h4 className="vertical-timeline-element-subtitle text-white/90">
-          CBIT Hyderabad
-        </h4>
-        <p className="text-white/80">
-          Specializing in AI, ML, and Full Stack Development, MERN Stack Development.
-        </p>
-      </VerticalTimelineElement>
-
-      <VerticalTimelineElement
-        contentStyle={{ background: "#14b8a6", color: "#fff" }}
-        contentArrowStyle={{ borderRight: "7px solid #14b8a6" }}
-        iconStyle={{ background: "#14b8a6", color: "#fff" }}
-        icon={<FaBriefcase />}
-        date="Feb 2025 - Apr 2024"
-      >
-        <h3 className="vertical-timeline-element-title text-white font-semibold text-xl">
-          Intern
-        </h3>
-        <h4 className="vertical-timeline-element-subtitle text-white/90">
-          Nullclass
-        </h4>
-        <p className="text-white/80">
-          Woked an AI-powered Q&A chatbot using LangChain and Gemini API.
-        </p>
-      </VerticalTimelineElement>
-      
-      <VerticalTimelineElement
-        contentStyle={{ background: "#4b6c8a", color: "#fff" }}
-        contentArrowStyle={{ borderRight: "7px solid #4b6c8a" }}
-        iconStyle={{ background: "#4b6c8a", color: "#fff" }}
-        icon={<FaBriefcase />}
-        date="Apr 2025 - Present"
-      >
-        <h3 className="vertical-timeline-element-title text-white font-semibold text-xl">
-          Intern
-        </h3>
-        <h4 className="vertical-timeline-element-subtitle text-white/90">
-          Tenth Plus
-        </h4>
-        <p className="text-white/80">
-          Building Spaced Revision App.
-        </p>
-      </VerticalTimelineElement>
-
-        </VerticalTimeline>
-      </section>
-
-      {/* Elegant SVG Section Separator */}
-      <div className="relative -mt-16">
-        <motion.svg
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="w-full"
-          viewBox="0 0 1440 150"
-          preserveAspectRatio="none"
-        >
-          <defs>
-            <linearGradient id="lightGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#e0e7ff" />
-              <stop offset="100%" stopColor="#c7d2fe" />
-            </linearGradient>
-            <linearGradient id="darkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#1e293b" />
-              <stop offset="100%" stopColor="#0f172a" />
-            </linearGradient>
-          </defs>
-          <path
-            fill={gradientFill}
-            d="M0,96L60,101.3C120,107,240,117,360,117.3C480,117,600,107,720,90.7C840,75,960,53,1080,64C1200,75,1320,117,1380,138.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
-            fillOpacity="1"
-          />
-        </motion.svg>
-      </div>
-
+    
       <SocialLinks />
     </>
   );

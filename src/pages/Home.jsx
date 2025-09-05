@@ -21,7 +21,6 @@ import {
   SiMongodb,
   SiPostman,
   SiJavascript,
-  SiJava,
   SiC,
   SiKotlin,
   SiMysql,
