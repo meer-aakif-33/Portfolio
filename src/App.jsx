@@ -20,6 +20,7 @@ export default function App() {
     <CustomCursor />
       <ScrollToTop/>
       <Navbar />
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

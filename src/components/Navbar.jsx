@@ -17,7 +17,16 @@ export default function Navbar() {
     "transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400";
 
   const navLinks = [
-    { to: "/", label: "Home" },
+    { to: "/",
+      label: (
+        <Link 
+          to="/" 
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          Home
+        </Link>
+      )
+    },
     { to: "/about", label: "About" },
     { to: "/projects", label: "Projects" },
     { to: "/contact", label: "Contact" },
@@ -92,7 +101,7 @@ export default function Navbar() {
         className={`absolute top-full left-0 w-full bg-white dark:bg-zinc-900 border-t dark:border-zinc-700 transform transition-all duration-300 ease-in-out origin-top md:hidden z-40 ${
           isOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 pointer-events-none"
         }`}
-      >
+      > 
         <div className="flex flex-col gap-5 p-6 text-gray-800 dark:text-gray-200 text-base font-medium">
           {navLinks.map(({ to, label }) => (
             <Link
