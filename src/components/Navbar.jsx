@@ -5,7 +5,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 import clsx from "clsx";
-import Blogs from "../pages/Blogs";
+import Blogs from "../pages/Blogs"; 
 import { label } from "framer-motion/client";
 
 export default function Navbar() {

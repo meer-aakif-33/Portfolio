@@ -9,6 +9,8 @@ theme: {
   extend: {
     animation: {
       fadeIn: 'fadeIn 0.6s ease-out',
+      'spin-slow': 'spin 10s linear infinite',
+
     },
     transitionProperty: {
       'colors': 'background-color, border-color, color, fill, stroke',

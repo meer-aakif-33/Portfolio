@@ -124,17 +124,30 @@ export default function Home() {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="relative z-10 text-center px-4"
         >
-          {/* 👇 Profile Photo */}
+          {/* 👇 Profile Photo with Visible Gradient Ring */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="flex justify-center mb-6"
+            className="relative flex justify-center mb-6"
           >
-            <img
+            {/* Animated Gradient Ring */}
+            <div className="absolute -inset-4 flex items-center justify-center -z-10">
+              <div className="w-52 h-52 sm:w-72 sm:h-72 md:w-80 md:h-80 
+                    rounded-full bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 
+                    animate-spin-slow blur-2xl opacity-40">
+              </div>
+            </div>
+
+            {/* Profile Image */}
+            <motion.img
               src="/web-app-manifest-512x512.png"
               alt="Aakif"
-              className="w-40 h-40 sm:w-56 sm:h-52 md:w-60 md:h-60 rounded-full border-4 border-blue-500 shadow-lg object-cover"
+              className="relative w-40 h-40 sm:w-56 sm:h-56 md:w-60 md:h-60 rounded-full 
+               border-4 border-blue-500 shadow-xl object-cover 
+               transition-transform duration-500 hover:scale-105 hover:shadow-[0_0_25px_rgba(59,130,246,0.7)]"
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             />
           </motion.div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-cyan-400 dark:to-violet-500 mb-4">
@@ -192,8 +205,8 @@ export default function Home() {
               <Link
                 to="/contact"
                 className="w-full sm:w-auto min-w-[180px] text-center inline-block relative font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-xl 
-                        text-white bg-gradient-to-r from-green-500 to-emerald-600 
-                        hover:from-green-600 hover:to-emerald-700 
+                        text-white bg-gradient-to-r from-blue-500 to-indigo-600 
+                        hover:from-blue-600 hover:to-indigo-700 
                         shadow-md hover:shadow-xl 
                         transition-all duration-300"
               >
