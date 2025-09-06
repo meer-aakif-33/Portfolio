@@ -142,7 +142,7 @@ export default function Home() {
             {/* Profile Image */}
             <motion.img
               src="/web-app-manifest-512x512.png"
-              alt="Aakif"
+              alt="Aakif Ahmad Mir Profile Photo"
               className="relative w-40 h-40 sm:w-56 sm:h-56 md:w-60 md:h-60 rounded-full 
                border-4 border-blue-500 shadow-xl object-cover 
                transition-transform duration-500 hover:scale-105 hover:shadow-[0_0_25px_rgba(59,130,246,0.7)]"
