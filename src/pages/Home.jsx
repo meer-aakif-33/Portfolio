@@ -132,9 +132,9 @@ export default function Home() {
             className="flex justify-center mb-6"
           >
             <img
-              src="/web-app-manifest-512x512.png" // 👉 replace with your actual photo path (e.g., /assets/aakif.jpg)
+              src="/web-app-manifest-512x512.png"
               alt="Aakif"
-              className="w-60 h-60 rounded-full border-4 border-blue-500 shadow-lg object-cover"
+              className="w-40 h-40 sm:w-56 sm:h-52 md:w-60 md:h-60 rounded-full border-4 border-blue-500 shadow-lg object-cover"
             />
           </motion.div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-cyan-400 dark:to-violet-500 mb-4">
@@ -157,43 +157,51 @@ export default function Home() {
             />
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 mt-6 w-full px-4">
-            
+            {/* Skills Button */}
             <motion.a
-              href='#skills'
+              href="#skills"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-53 text-center inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold px- sm:px-16 py-2 sm:py-3 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="w-full sm:w-auto min-w-[180px] text-center inline-block relative font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-xl 
+                      text-white bg-gradient-to-r from-blue-500 to-indigo-600 
+                      hover:from-blue-600 hover:to-indigo-700 
+                      shadow-md hover:shadow-xl 
+                      transition-all duration-300"
             >
-              Skills
-                          
+              💡 Skills
             </motion.a>
 
-            {/* View Projects */}
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
+            {/* Projects Button */}
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 to="/projects"
-                className="min-w-max whitespace-nowrap text-center inline-block relative text-blue-600 dark:text-cyan-400 font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-xl bg-white dark:bg-zinc-900 transition-all duration-300 border-2 border-blue-500 hover:shadow-[0_0_12px_rgba(59,130,246,0.5)] hover:scale-105 transform"
+                className="w-full sm:w-auto min-w-[180px] text-center inline-block relative font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-xl 
+                        text-blue-600 dark:text-cyan-400 
+                        bg-white dark:bg-zinc-900 
+                        border-2 border-blue-500 
+                        hover:shadow-[0_0_14px_rgba(59,130,246,0.6)] 
+                        hover:scale-105 transform 
+                        transition-all duration-300"
               >
                 🚀 View Projects
               </Link>
             </motion.div>
 
             {/* Let's Connect */}
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 to="/contact"
-                className="min-w-max whitespace-nowrap text-center inline-block relative font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-xl text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg"
+                className="w-full sm:w-auto min-w-[180px] text-center inline-block relative font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-xl 
+                        text-white bg-gradient-to-r from-green-500 to-emerald-600 
+                        hover:from-green-600 hover:to-emerald-700 
+                        shadow-md hover:shadow-xl 
+                        transition-all duration-300"
               >
-                🤝 Let's Connect
+                🤝 Let’s Connect
               </Link>
             </motion.div>
           </div>
+
         </motion.div>
       </section>
 
