@@ -40,6 +40,7 @@ const projects = [
     image: "/projects/chef-claude.png",
     tags: ["React", "AI", "Frontend"],
     link: "https://github.com/meer-aakif-33/Chef-Claude-Recipe-Generator",
+    live_link: "https://aakif-chef-claude-recipe-generator.netlify.app",
   },
   {
     title: "Olympics Data Analysis and Visualization",
