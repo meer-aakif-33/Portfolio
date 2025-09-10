@@ -15,6 +15,7 @@ import {
   FaDatabase,
   FaLayerGroup,
 } from "react-icons/fa";
+
 import {
   SiFastapi,
   SiTailwindcss,
@@ -30,8 +31,10 @@ import {
   SiNumpy,
   SiPandas,
   SiBootstrap,
-  SiExpress,
+  SiExpress,  
   SiFlask,
+  SiDocker,
+  SiPostgresql,
 } from "react-icons/si";
 
 import About from "./About";
@@ -62,15 +65,15 @@ const skillGroups = [
     ],
   },
   {
-    title: "Tech Stack",
+    title: "Web & App Development",
     skills: [
-      { name: "Full Stack", icon: <FaLayerGroup />, color: "text-purple-500" },
-      { name: "MERN", icon: <FaReact />, color: "text-cyan-500" },
-      {
-        name: "Machine Learning",
-        icon: <SiScikitlearn />,
-        color: "text-orange-400",
-      },
+      { name: "ReactJS", icon: <FaReact />, color: "text-cyan-500" },
+      { name: "NodeJS", icon: <FaNodeJs />, color: "text-green-600" },
+      { name: "ExpressJS", icon: <SiExpress />, color: "text-gray-700" },
+      { name: "Flask", icon: <SiFlask />, color: "text-gray-400" },
+      { name: "FastAPI", icon: <SiFastapi />, color: "text-teal-400" },
+      { name: "Tailwind", icon: <SiTailwindcss />, color: "text-sky-400" },
+      { name: "Bootstrap", icon: <SiBootstrap />, color: "text-purple-600" },
     ],
   },
   {
@@ -78,38 +81,31 @@ const skillGroups = [
     skills: [
       { name: "MongoDB", icon: <SiMongodb />, color: "text-emerald-500" },
       { name: "MySQL", icon: <SiMysql />, color: "text-blue-500" },
+      { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-sky-500" },
     ],
   },
   {
-    title: "Tools",
+    title: "Machine Learning / Data Science",
+    skills: [
+      { name: "Scikit-Learn", icon: <SiScikitlearn />, color: "text-orange-400" },
+      { name: "Pandas", icon: <SiPandas />, color: "text-black" },
+      { name: "NumPy", icon: <SiNumpy />, color: "text-blue-500" },
+      { name: "Matplotlib", icon: <FaChartBar />, color: "text-indigo-500" },
+    ],
+  },
+  {
+    title: "Tools & Platforms",
     skills: [
       { name: "Git", icon: <FaGitAlt />, color: "text-orange-500" },
       { name: "GitHub", icon: <SiGithub />, color: "text-gray-800" },
       { name: "RabbitMQ", icon: <SiRabbitmq />, color: "text-rose-400" },
       { name: "Postman", icon: <SiPostman />, color: "text-pink-600" },
-    ],
-  },
-  {
-    title: "Libraries / Frameworks",
-    skills: [
-      {
-        name: "Scikit-Learn",
-        icon: <SiScikitlearn />,
-        color: "text-orange-400",
-      },
-      { name: "Matplotlib", icon: <FaChartBar />, color: "text-indigo-500" },
-      { name: "Pandas", icon: <SiPandas />, color: "text-black" },
-      { name: "NumPy", icon: <SiNumpy />, color: "text-blue-500" },
-      { name: "Bootstrap", icon: <SiBootstrap />, color: "text-purple-600" },
-      { name: "NodeJS", icon: <FaNodeJs />, color: "text-green-600" },
-      { name: "ExpressJS", icon: <SiExpress />, color: "text-gray-700" },
-      { name: "ReactJS", icon: <FaReact />, color: "text-cyan-500" },
-      { name: "Tailwind", icon: <SiTailwindcss />, color: "text-sky-400" },
-      { name: "Flask", icon: <SiFlask />, color: "text-gray-400" },
-      { name: "FastAPI", icon: <SiFastapi />, color: "text-teal-400" },
+      { name: "Docker", icon: <SiDocker />, color: "text-blue-400" },
+
     ],
   },
 ];
+
 
 export default function Home() {
   return (

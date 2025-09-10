@@ -16,22 +16,13 @@ export default function Navbar() {
   const linkStyle =
     "transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400";
 
-  const navLinks = [
-    { to: "/",
-      label: (
-        <Link 
-          to="/" 
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        >
-          Home
-        </Link>
-      )
-    },
-    { to: "/about", label: "About" },
-    { to: "/projects", label: "Projects" },
-    { to: "/contact", label: "Contact" },
-    // { to: "/blogs", label: "Blogs"},
-  ];
+const navLinks = [
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/projects", label: "Projects" },
+  { to: "/contact", label: "Contact" },
+  // { to: "/blogs", label: "Blogs" },
+];
 
   const isActive = (path) => location.pathname === path;
 
@@ -47,6 +38,10 @@ export default function Navbar() {
           <Link
             key={to}
             to={to}
+            onClick={() => {
+              setIsOpen(false); // close mobile menu
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
             className={clsx(
               linkStyle,
               isActive(to) && "text-blue-600 dark:text-blue-400 font-semibold"
