@@ -110,7 +110,6 @@ export default function About() {
         </p>
         <p className="text-white/90">
           Integrated Gemini AI for PDF concept extraction, NCERT-style question generation, and auto-classification by concept, type, and difficulty, while building a responsive frontend dashboard for students and teachers.
-          Enhanced skills in Python, FastAPI, SQL, ReactJS, problem-solving, rapid prototyping, and cross-functional collaboration.        
         </p>
         <p className="text-white/90">
           Enhanced skills in Python, FastAPI, SQL, ReactJS, problem-solving, rapid prototyping, and cross-functional collaboration.        
