@@ -102,11 +102,18 @@ export default function About() {
         <h3 className="vertical-timeline-element-title text-white font-semibold text-xl">
           Intern
         </h3>
-        <h4 className="vertical-timeline-element-subtitle text-white/90">
-          Tenth Plus
-        </h4>
-        <p className="text-white/80">
-          Building Spaced Revision App.
+        <h3 className="vertical-timeline-element-subtitle text-white/90">
+          Full Stack Developer Intern | Mar 2025 – Aug 2025
+        </h3>
+        <p className="text-white/90">
+          Developed a Spaced Revision Platform using FastAPI, MySQL, and React with personalized question delivery, automated scheduling, and real-time analytics.
+        </p>
+        <p className="text-white/90">
+          Integrated Gemini AI for PDF concept extraction, NCERT-style question generation, and auto-classification by concept, type, and difficulty, while building a responsive frontend dashboard for students and teachers.
+          Enhanced skills in Python, FastAPI, SQL, ReactJS, problem-solving, rapid prototyping, and cross-functional collaboration.        
+        </p>
+        <p className="text-white/90">
+          Enhanced skills in Python, FastAPI, SQL, ReactJS, problem-solving, rapid prototyping, and cross-functional collaboration.        
         </p>
       </VerticalTimelineElement>
 
