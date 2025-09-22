@@ -18,7 +18,7 @@ const projects = [
     image: "/projects/news-aggregator.png",
     tags: ["React", "Node.js", "PostgreSQL", "NLP", "Transformers", "Sklearn"],
     link: "https://github.com/meer-aakif-33/News-Aggregator-with-Personlised-Recommendations-and-Summaries",
-    live_link: "https://news-aggregator-with-personlised-re-mu.vercel.app/",
+    live_link: "https://aakif-mir-ml-news-aggregator.netlify.app",
   },
   {
     title: "Distributed Event-Driven Video Processing Pipeline",
