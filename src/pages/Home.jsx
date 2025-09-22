@@ -228,7 +228,7 @@ export default function Home() {
             My Skills
           </h2>
 
-          {skillGroups.map((group, idx) => (
+          { ((group, idx) => (
             <div key={idx} className="mb-12">
               <h3 className="text-2xl font-semibold text-left sm:text-center text-gray-700 dark:text-gray-300 mb-6">
                 {group.title}
