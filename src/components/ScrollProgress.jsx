@@ -16,6 +16,7 @@ export default function ScrollProgress() {
     return () => window.removeEventListener("scroll", updateProgress);
   }, []);
 
+
   return (
     <div className="fixed top-0 left-0 w-full h-[2px] z-[9999] bg-transparent">
       <div
@@ -26,3 +27,5 @@ export default function ScrollProgress() {
     </div>
   );
 }
+
+

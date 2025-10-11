@@ -82,14 +82,18 @@ export default function About() {
         date="Feb 2025 - Apr 2024"
       >
         <h3 className="vertical-timeline-element-title text-white font-semibold text-xl">
-          Intern
+          Intern at <em>Null Classes</em>
         </h3>
-        <h4 className="vertical-timeline-element-subtitle text-white/90">
-          Nullclass
-        </h4>
-        <p className="text-white/80">
-          Woked an AI-powered Q&A chatbot using LangChain and Gemini API.
-        </p>
+        <h3 className="vertical-timeline-element-subtitle text-white/90">
+          AI Developer Intern | Apr 2025 – June 2025
+        </h3>
+        <p className="text-white/90">
+          Developed an interactive Customer Service Chatbot using Streamlit, LangChain, and Google Gemini API, enabling automated and context-aware question answering.        </p>
+        <p className="text-white/90">
+         Implemented a FAISS vector database with HuggingFace embeddings to support semantic search and efficient knowledge retrieval from structured CSV datasets.        </p>
+        <p className="text-white/90">
+         Built a real-time chat interface in Streamlit featuring chat history, styled user/bot message bubbles, and knowledge base
+         auto-creation for scalable support automation.        </p>
       </VerticalTimelineElement>
       
       <VerticalTimelineElement
@@ -100,7 +104,7 @@ export default function About() {
         date="Apr 2025 - June 2025"
       >
         <h3 className="vertical-timeline-element-title text-white font-semibold text-xl">
-          Intern
+          Intern at <em>Stack Junior India</em>
         </h3>
         <h3 className="vertical-timeline-element-subtitle text-white/90">
           Full Stack Developer Intern | Mar 2025 – Aug 2025
