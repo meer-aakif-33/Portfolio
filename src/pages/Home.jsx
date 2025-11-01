@@ -154,8 +154,7 @@ export default function Home() {
             <Typewriter
               words={[
                 "Full Stack Developer",
-                "Machine Learning Developer",
-                "MERN Stack Developer",
+                "Machine Learning Enthusiast",
               ]}
               loop
               cursor
