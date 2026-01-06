@@ -37,7 +37,7 @@ const projects = [
   {
     title: "Sweet Shop Management System (TDD)",
     desc: "Built a full-stack Sweet Shop Management System using FastAPI, React, and TypeScript by strictly following Test-Driven Development (Red–Green–Refactor). Implemented JWT-based authentication, role-based authorization (USER/ADMIN), and inventory management with backend-enforced security. Designed comprehensive unit and integration tests covering auth, CRUD, inventory workflows, and search, ensuring reliable behavior and production-style API contracts.",
-    image: "/projects/sweet-shop.png",
+    image: "/projects/sweets-shop.png",
     tags: ["FastAPI", "Python", "React", "TypeScript", "JWT", "TDD", "Pytest"],
     link: "https://github.com/meer-aakif-33/sweet-shop-system",
   },
