@@ -35,11 +35,18 @@ const projects = [
     link: "https://github.com/meer-aakif-33/YouTube-Video-summarizer-and-caption-extractor",
   },
   {
+    title: "Sweet Shop Management System (TDD)",
+    desc: "Built a full-stack Sweet Shop Management System using FastAPI, React, and TypeScript by strictly following Test-Driven Development (Red–Green–Refactor). Implemented JWT-based authentication, role-based authorization (USER/ADMIN), and inventory management with backend-enforced security. Designed comprehensive unit and integration tests covering auth, CRUD, inventory workflows, and search, ensuring reliable behavior and production-style API contracts.",
+    image: "/projects/sweet-shop.png",
+    tags: ["FastAPI", "Python", "React", "TypeScript", "JWT", "TDD", "Pytest"],
+    link: "https://github.com/meer-aakif-33/sweet-shop-system",
+  },
+  {
     title: "Place Review REST API",
     desc: "Developed a production-grade REST API using Node.js, Express, Prisma, and PostgreSQL to manage authenticated place reviews. Implemented JWT-based authentication, strict relational constraints, and transaction-safe review creation. Designed advanced search with exact/partial matching and rating filters, along with aggregated place statistics. Followed clean, feature-based architecture with strong focus on security, maintainability, and real-world backend trade-offs.",
-    image: "/projects/place-review-api.png",
+    image: "/projects/place-review.png",
     tags: ["Node.js", "Express", "PostgreSQL", "Prisma", "JWT", "REST API"],
-    link: "https://github.com/meer-aakif-33/place-review-rest-api",
+    link: "https://github.com/meer-aakif-33/Place-Review-API",
   },
   {
     title: "Chef Recipe Generator",
