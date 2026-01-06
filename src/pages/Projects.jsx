@@ -35,6 +35,13 @@ const projects = [
     link: "https://github.com/meer-aakif-33/YouTube-Video-summarizer-and-caption-extractor",
   },
   {
+    title: "Place Review REST API",
+    desc: "Developed a production-grade REST API using Node.js, Express, Prisma, and PostgreSQL to manage authenticated place reviews. Implemented JWT-based authentication, strict relational constraints, and transaction-safe review creation. Designed advanced search with exact/partial matching and rating filters, along with aggregated place statistics. Followed clean, feature-based architecture with strong focus on security, maintainability, and real-world backend trade-offs.",
+    image: "/projects/place-review-api.png",
+    tags: ["Node.js", "Express", "PostgreSQL", "Prisma", "JWT", "REST API"],
+    link: "https://github.com/meer-aakif-33/place-review-rest-api",
+  },
+  {
     title: "Chef Recipe Generator",
     desc: "Built a React-based AI-powered Recipe Generator that suggests recipes based on user-provided ingredients. Implemented real-time ingredient management, duplicate prevention, and smooth UI animations. Deployed the application with dynamic recipe fetching and automatic scrolling for an enhanced user experience.",
     image: "/projects/chef-claude.png",
