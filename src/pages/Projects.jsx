@@ -35,6 +35,13 @@ const projects = [
     link: "https://github.com/meer-aakif-33/YouTube-Video-summarizer-and-caption-extractor",
   },
   {
+  title: "AI-Powered Real-Time Interview Practice Platform",
+  desc: "Built a real-time, voice-based AI interview platform that simulates technical coding interviews using streaming audio, LLM reasoning, and text-to-speech. The system handles live session orchestration, low-latency speech recognition, intelligent response generation, and real-time audio playback. It follows a distributed, event-driven architecture with separate signaling, media transport, and intelligence layers, enabling scalable and interactive interview experiences with contextual code understanding.",
+  image: "/projects/interview-platform.png",
+  tags: ["Node.js", "Python", "LiveKit", "WebRTC", "LLM", "Deepgram", "Cartesia", "Real-Time Systems"],
+  link: "https://github.com/meer-aakif-33/Interview-practice-platform",
+},
+  {
     title: "Sweet Shop Management System (TDD)",
     desc: "Built a full-stack Sweet Shop Management System using FastAPI, React, and TypeScript by strictly following Test-Driven Development (Red–Green–Refactor). Implemented JWT-based authentication, role-based authorization (USER/ADMIN), and inventory management with backend-enforced security. Designed comprehensive unit and integration tests covering auth, CRUD, inventory workflows, and search, ensuring reliable behavior and production-style API contracts.",
     image: "/projects/sweets-shop.png",
