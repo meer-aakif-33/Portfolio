@@ -1,3 +1,4 @@
+// src/pages/Contact.jsx
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";

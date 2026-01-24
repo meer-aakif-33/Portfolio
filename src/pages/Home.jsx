@@ -1,3 +1,4 @@
+// src/pages/Home.jsx
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { SocialLinks } from "../components/SocialLinks";

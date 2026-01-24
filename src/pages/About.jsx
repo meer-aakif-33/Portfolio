@@ -1,3 +1,4 @@
+// src/pages/About.jsx
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaPython, FaGitAlt, FaGraduationCap, FaBriefcase } from "react-icons/fa";
 import { SiFastapi, SiTailwindcss, SiMongodb, SiPostman } from "react-icons/si";
