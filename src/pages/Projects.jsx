@@ -1,17 +1,12 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { SocialLinks } from "../components/SocialLinks";
 import { useTheme } from "next-themes";
 import "react-vertical-timeline-component/style.min.css";
 import { useState } from "react";
+
 const projects = [
-  // {
-  //   title: "Trustribe - Community Engagement Platform",
-  //   desc: "Collaborated on a Community Engagement platform with real-time chat via Socket.io, incident reporting, and event management using MongoDB. Implemented user authentication, session management with express-session, and email notifications for incidents and complaints. Designed a dynamic event calendar with seamless updates and secure user interactions, including group chat and access control.",
-  //   image: "/projects/trustribe.png",
-  //   tags: ["Node.js", "Express", "MongoDB", "Socket.io"],
-  //   link: "https://github.com/mrranger939/Community-Engagement",
-  //   live_link: "https://community-engagement.onrender.com",
-  // },
   {
     title: "News Aggregator with Personalized Recommendations and Summaries",
     desc: "Built a full-stack news aggregator using React, Node.js/Express, PostgreSQL, and Python NLP to deliver personalized, summarized, and recommended content. Implemented JWT-based authentication with secure signup/login flows, automatic preference persistence, and seamless retrieval of user preferences on login. Integrated real-time web scraping, intelligent summarization (Transformers), and a recommendation system (Scikit-learn) to enhance personalization. Designed a responsive, preference-driven UI, improving engagement and reducing average read time by 60% through AI-generated summaries.",
@@ -35,12 +30,12 @@ const projects = [
     link: "https://github.com/meer-aakif-33/YouTube-Video-summarizer-and-caption-extractor",
   },
   {
-  title: "AI-Powered Real-Time Interview Practice Platform",
-  desc: "Built a real-time, voice-based AI interview platform that simulates technical coding interviews using streaming audio, LLM reasoning, and text-to-speech. The system handles live session orchestration, low-latency speech recognition, intelligent response generation, and real-time audio playback. It follows a distributed, event-driven architecture with separate signaling, media transport, and intelligence layers, enabling scalable and interactive interview experiences with contextual code understanding.",
-  image: "/projects/interview-platform.png",
-  tags: ["Node.js", "Python", "LiveKit", "WebRTC", "LLM", "Deepgram", "Cartesia", "Real-Time Systems"],
-  link: "https://github.com/meer-aakif-33/Interview-practice-platform",
-},
+    title: "AI-Powered Real-Time Interview Practice Platform",
+    desc: "Built a real-time, voice-based AI interview platform that simulates technical coding interviews using streaming audio, LLM reasoning, and text-to-speech. The system handles live session orchestration, low-latency speech recognition, intelligent response generation, and real-time audio playback. It follows a distributed, event-driven architecture with separate signaling, media transport, and intelligence layers, enabling scalable and interactive interview experiences with contextual code understanding.",
+    image: "/projects/interview-platform.png",
+    tags: ["Node.js", "Python", "LiveKit", "WebRTC", "LLM", "Deepgram", "Cartesia", "Real-Time Systems"],
+    link: "https://github.com/meer-aakif-33/Interview-practice-platform",
+  },
   {
     title: "Sweet Shop Management System (TDD)",
     desc: "Built a full-stack Sweet Shop Management System using FastAPI, React, and TypeScript by strictly following Test-Driven Development (Red–Green–Refactor). Implemented JWT-based authentication, role-based authorization (USER/ADMIN), and inventory management with backend-enforced security. Designed comprehensive unit and integration tests covering auth, CRUD, inventory workflows, and search, ensuring reliable behavior and production-style API contracts.",
@@ -83,7 +78,7 @@ const projects = [
     title: "Amazon.com Clone with Vanilla JS",
     desc: "Designed and developed a user-friendly Amazon.com clone using Vanilla JavaScript. Features include fetching data from the backend, adding/removing items from the cart.",
     image: "/projects/amazon-dot-com.png",
-    tags: ["JavaScript", "Frontend",],
+    tags: ["JavaScript", "Frontend"],
     link: "https://github.com/meer-aakif-33/Amazon.com-with-vanilla-JS",
     live_link: "http://meer-aakif-33.github.io/Amazon.com-with-vanilla-JS/",
   },
@@ -91,92 +86,246 @@ const projects = [
 
 export default function ProjectsPage() {
   const { theme } = useTheme();
-  const gradientFill = theme === "dark" ? "url(#darkGradient)" : "url(#lightGradient)";
+  const [expanded, setExpanded] = useState(null);
 
   return (
     <>
+      <style jsx>{`
+        @keyframes gradient-shift {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
+
+        @keyframes shimmer-flow {
+          0% { background-position: -200% center; }
+          100% { background-position: 200% center; }
+        }
+
+        @keyframes float-subtle {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-8px); }
+        }
+
+        .project-card {
+          transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+          position: relative;
+          // overflow: hidden;
+        }
+
+        .project-card::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border-radius: 1rem;
+          padding: 2px;
+          background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.6), transparent);
+          background-size: 200% 200%;
+          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          opacity: 0;
+          transition: opacity 0.5s ease;
+          animation: shimmer-flow 3s linear infinite;
+          pointer-events: none;   /* 🔥 This fixes Read More */
+
+        }
+
+        .project-card:hover::before {
+          opacity: 1;
+        }
+
+        .project-card:hover {
+          transform: translateY(-12px) scale(1.02);
+          box-shadow: 0 25px 60px -15px rgba(59, 130, 246, 0.5),
+                      0 15px 40px -10px rgba(139, 92, 246, 0.4);
+        }
+
+        .project-card:hover .project-image {
+          transform: scale(1.1);
+        }
+
+        .project-image {
+          transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .tag-item {
+          transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+          position: relative;
+        }
+
+        .tag-item::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border-radius: 9999px;
+          background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .tag-item:hover::before {
+          opacity: 1;
+        }
+
+        .tag-item:hover {
+          transform: scale(1.15) translateY(-2px);
+          box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+        }
+
+        .gradient-text {
+          background: linear-gradient(
+            90deg,
+            #3b82f6 0%,
+            #8b5cf6 25%,
+            #ec4899 50%,
+            #8b5cf6 75%,
+            #3b82f6 100%
+          );
+          background-size: 200% auto;
+          -webkit-background-clip: text;
+          background-clip: text;
+          animation: shimmer-flow 3s linear infinite;
+        }
+
+        .link-hover {
+          position: relative;
+          transition: all 0.3s ease;
+        }
+
+        .link-hover::after {
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: currentColor;
+          transition: width 0.3s ease;
+        }
+
+        .link-hover:hover::after {
+          width: 100%;
+        }
+
+        .link-hover:hover {
+          transform: translateX(4px);
+        }
+      `}</style>
+
       {/* Projects Section */}
-      <section className="min-h-screen px-6 py-24 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-zinc-900 dark:to-zinc-800 transition-colors duration-500">
+      <section className="min-h-screen px-6 py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-zinc-900 dark:via-zinc-900 dark:to-zinc-800 transition-colors duration-500 relative overflow-hidden">
+        {/* Animated background decorations */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500/10 dark:bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="max-w-6xl mx-auto"
+          className="max-w-6xl mx-auto relative z-10"
         >
-          <h2 className="text-3xl font-extrabold mb-14 text-center text-gray-900 dark:text-white tracking-tight">
-            My Projects
-          </h2>
-          <div className="grid gap-12 md:grid-cols-2">
-{projects.map((p, i) => {
-  const [expanded, setExpanded] = useState(null);
-  const isOpen = expanded === i;
-
-  return (
-    <motion.div
-      key={i}
-      whileHover={{ scale: 1.03, rotate: 0.3 }}
-      transition={{ duration: 0.3 }}
-      className="bg-white dark:bg-zinc-900 text-gray-800 dark:text-white border border-gray-200 dark:border-zinc-700 rounded-2xl shadow-md hover:shadow-xl overflow-hidden transform transition-transform"
-    >
-      <img
-        src={p.image}
-        alt={p.title}
-        className="w-full h-52 object-cover object-top transition duration-300 hover:scale-105"
-      />
-      <div className="p-6">
-        <h3 className="text-2xl font-bold mb-2">{p.title}</h3>
-
-        <p
-          className={`text-gray-600 dark:text-gray-300 mb-2 leading-relaxed transition-all duration-300 ease-in-out ${
-            isOpen ? "" : "line-clamp-3"
-          }`}
-        >
-          {p.desc}
-        </p>
-
-        <button
-          onClick={() => setExpanded(isOpen ? null : i)}
-          className="text-blue-600 dark:text-blue-400 font-medium hover:underline focus:outline-none mb-4"
-        >
-          {isOpen ? "Show less" : "Read more"}
-        </button>
-
-        <div className="flex flex-wrap gap-2 mb-4">
-          {p.tags.map((tag, idx) => (
-            <span
-              key={idx}
-              className="px-2 py-1 text-sm bg-indigo-100 dark:bg-indigo-800 text-indigo-700 dark:text-white rounded-full shadow-sm hover:scale-105 transition-transform"
-            >
-              #{tag}
-            </span>
-          ))}
-        </div>
-
-        <div className="flex gap-4">
-          {p.live_link && (
-            <a
-              href={p.live_link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-600 dark:text-green-400 font-semibold inline-flex items-center gap-1 hover:underline"
-            >
-              Live Demo →
-            </a>
-          )}
-          <a
-            href={p.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-indigo-600 dark:text-indigo-400 font-semibold inline-flex items-center gap-1 hover:underline"
+          <motion.h2 
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-14 text-center tracking-tight"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            View Project →
-          </a>
-        </div>
-      </div>
-    </motion.div>
-  );
-})}
+            <span className="gradient-text text-transparent">My Projects</span>
+          </motion.h2>
 
+          <div className="grid gap-12 md:grid-cols-2">
+            {projects.map((p, i) => {
+              const isOpen = expanded === i;
+
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.6, delay: i * 0.1 }}
+                  className="project-card bg-white dark:bg-zinc-900 text-gray-800 dark:text-white border border-gray-200 dark:border-zinc-700 rounded-2xl shadow-lg"
+                >
+                  <div className="overflow-hidden">
+                    <img
+                      src={p.image}
+                      alt={p.title}
+                      className="project-image w-full h-52 object-cover object-top"
+                    />
+                  </div>
+                  
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold mb-3 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+                      {p.title}
+                    </h3>
+
+<div className="relative">
+  <motion.p
+    initial={false}
+    animate={{
+      maxHeight: isOpen ? 500 : 72,   // px values work smoother than tailwind strings
+      opacity: isOpen ? 1 : 0.85,
+    }}
+transition={{
+  type: "spring",
+  stiffness: 65,
+  damping: 26,
+  mass: 1.3,
+}}
+
+    className="text-gray-600 dark:text-gray-300 mb-3 leading-relaxed overflow-hidden"
+  >
+    {p.desc}
+  </motion.p>
+
+  {!isOpen && (
+    <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white dark:from-zinc-900 to-transparent pointer-events-none" />
+  )}
+</div>
+
+<button
+  type="button"
+  onClick={() => setExpanded(prev => (prev === i ? null : i))}
+  className="text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 focus:outline-none mb-4 transition-all duration-300 hover:underline cursor-pointer"
+>
+  {isOpen ? "Show less ↑" : "Read more →"}
+</button>
+
+                    <div className="flex flex-wrap gap-2 mb-5">
+                      {p.tags.map((tag, idx) => (
+                        <span
+                          key={idx}
+                          className="tag-item px-3 py-1.5 text-sm bg-gradient-to-r from-indigo-100 to-purple-100 dark:from-indigo-900/50 dark:to-purple-900/50 text-indigo-700 dark:text-indigo-300 rounded-full shadow-sm font-medium cursor-default"
+                        >
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="flex gap-6">
+                      {p.live_link && (
+                        <a
+                          href={p.live_link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="link-hover text-green-600 dark:text-green-400 font-semibold inline-flex items-center gap-1"
+                        >
+                          Live Demo →
+                        </a>
+                      )}
+                      <a
+                        href={p.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link-hover text-indigo-600 dark:text-indigo-400 font-semibold inline-flex items-center gap-1"
+                      >
+                        View Project →
+                      </a>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
       </section>
